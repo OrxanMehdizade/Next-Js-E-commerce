@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Login() {
   const [formData, setFormData] = useState({});
-  const authenticated=false;
+  const authenticated=true;
 
   useEffect(()=>{
     authenticated && redirect("/home");
