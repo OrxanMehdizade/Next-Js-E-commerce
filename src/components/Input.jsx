@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ name, setFormData }) => {
+const Input = ({ name = "", setFormData }) => {
   return (
     <div className="flex flex-col">
       <label className="text-black" htmlFor={name}>
