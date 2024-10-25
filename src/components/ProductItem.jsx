@@ -2,9 +2,10 @@
 import Image from "next/image";
 import EditIcon from "../assets/icons/edit.svg";
 import DeleteIcon from "../assets/icons/delete.svg";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 const ProductItem = ({ item }) => {
+  const Router=useRouter();
   return (
     <div className="flex justify-between px-12 py-6 border border-zinc-300">
       <div className="flex  gap-12">
@@ -17,8 +18,7 @@ const ProductItem = ({ item }) => {
       </div>
       <div className="flex  gap-6">
         <button onClick={()=>{
-          console.log("salam")
-          redirect("/edit");
+          Router.push(`/products/edit/?productId=${item._id}`);
         }}>
           <Image className="size-6" src={EditIcon} />
         </button>
