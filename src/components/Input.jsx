@@ -1,9 +1,7 @@
-import React from "react";
-
 const Input = ({ name = "", value }) => {
   return (
     <div className="flex flex-col">
-      <label className="text-black" htmlFor={name}>
+      <label htmlFor={name}>
         {name.charAt(0).toUpperCase() + name.slice(1)}
       </label>
       <input
